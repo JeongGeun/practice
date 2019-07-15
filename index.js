@@ -2,9 +2,8 @@ var express = require('express');
 var app = express();
 var path=require('path')
 app.use(express.static('public'));
-app.get('/10', function(req, res){
-    res.sendFile('10.html',{root:path.join(__dirname,'./web')})
-});
+
+
 app.get('/1', function(req, res){
     res.sendFile('1.html',{root:path.join(__dirname,'./web')})
 });
@@ -25,12 +24,6 @@ app.get('/6', function(req, res){
 });
 app.get('/7', function(req, res){
     res.sendFile('7.html',{root:path.join(__dirname,'./web')})
-});
-app.get('/8', function(req, res){
-    res.sendFile('8.html',{root:path.join(__dirname,'./web')})
-});
-app.get('/9', function(req, res){
-    res.sendFile('9.html',{root:path.join(__dirname,'./web')})
 });
 
 app.listen(3000, function(){
